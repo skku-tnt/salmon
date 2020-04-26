@@ -1,0 +1,32 @@
+#navigation{
+    background-color: navy;
+    width:10%;
+    height:100%;
+    float:left;
+    position: absolute;
+    z-index:1;
+}
+
+#page {
+    position: relative;
+    width:100%;
+    height:3000px;
+}
+
+#header {
+    background-color: lightgray;
+    width:100%;
+    height:150px;
+    display:block;
+}
+
+#content {
+    width:90%;
+    overflow:auto;
+    height:1000px;
+    display: inline-block;
+}
+
+body {
+    margin:0;
+}
