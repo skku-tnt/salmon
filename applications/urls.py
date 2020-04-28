@@ -6,4 +6,6 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="home"),
+    path('subject/', views.streamingPage, name="streamingPage"),
+    path('preparing/', views.preparePage, name="preparePage"),
 ]

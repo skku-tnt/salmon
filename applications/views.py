@@ -11,4 +11,10 @@ import re, random
 # from .models import Profile, Story, Region #적용할 모델들
 
 def home(request):
-    return render(request, 'index.html')
+    return render(request, 'intro.html')
+
+def streamingPage(request):
+    return render(request, 'subject.html')
+
+def preparePage(request):
+    return render(request, 'prepare.html')
