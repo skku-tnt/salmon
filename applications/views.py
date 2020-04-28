@@ -13,8 +13,14 @@ import re, random
 def home(request):
     return render(request, 'intro.html')
 
+def aboutPage(request):
+    return render(request, 'about.html')
+
 def streamingPage(request):
-    return render(request, 'subject.html')
+    return render(request, 'streaming.html')
+
+def creditPage(request):
+    return render(request, 'credit.html')
 
 def preparePage(request):
     return render(request, 'prepare.html')
