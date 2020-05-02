@@ -2,12 +2,27 @@
 
 {% block content %}
 <!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:120px;text-align: center;">
+<div class="w3-main" style="margin-left:120px;">
+    <div id="header" style="border:1px solid black">
+        header
+    </div>
+    
+    <div id="vands" style="margin-left:30px;border:1px solid black;">  <!--display:inline-block-->
+        <div id="videoArea">
+            <video oncontextmenu="return false;" width="800px" height="600px" controls="controls">
+                <source src="/static/video/vivid.mp4" type="video/mp4"></source>
+            </video>
+        </div>
+        <div id="scriptArea" style="display: inline-block ;width:400px;height:300px;">
+            script AREA;
+            </div>
+    </div>
 
-    <video oncontextmenu="return false;" width="800px" height="600px" controls="controls">
-        <source src="/static/video/vivid.mp4" type="video/mp4"></source>
-    </video>
-
-  <!-- End page content -->
+    <div id="summaryArea" style="border:1px solid black">
+        summary
+    </div>
 </div>
+
+    
+<!-- End page content -->
 {% endblock %}
