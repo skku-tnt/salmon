@@ -10,5 +10,5 @@ urlpatterns = [
     path('streaming/', views.streamingPage, name="streamingPage"),
     path('credit/', views.creditPage, name="creditPage"),
     path('preparing/', views.preparePage, name="preparePage"),
-    path('cornell/', views.preparePage, name="cornellPage"),
+    path('cornell/', views.cornellPage, name="cornellPage"),
 ]
