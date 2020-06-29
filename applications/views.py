@@ -24,3 +24,6 @@ def creditPage(request):
 
 def preparePage(request):
     return render(request, 'prepare.html')
+
+def cornellPage(request):
+    return render(request, 'cornell.html')
