@@ -9,7 +9,7 @@
     
     <div id="vands" style="margin-left:30px;border:1px solid black;width:100%">  <!--display:inline-block-->
         <div id="videoArea" style="display:inline-block;width:60%;">
-            <video oncontextmenu="return false;" width="100%" controls="controls">
+            <video id="myVideo" oncontextmenu="return false;" width="100%" controls autoplay>
                 <source src="/static/video/vivid.mp4" type="video/mp4"></source>
             </video>
         </div>
@@ -22,10 +22,21 @@
     </div>
 
     <div id="summaryArea" style="border:1px solid black;">
+        
+        <button type="button" onclick="moveTime()">20초로 이동하기</button>
+        <br>
         summary
+        <br>
     </div>
 </div>
 
+<script>
+function moveTime() {
+    var myVideo = document.getElementById("myVideo");
+    myVideo.currentTime = 20;
+}
+
+</script>
     
 <!-- End page content -->
 {% endblock %}
