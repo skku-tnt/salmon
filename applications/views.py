@@ -9,6 +9,7 @@ from django.http import JsonResponse
 from django.http import HttpResponse
 import re, random
 # from .models import Profile, Story, Region #적용할 모델들
+import pdfkit
 
 def home(request):
     return render(request, 'intro.html')
@@ -24,6 +25,11 @@ def streamingPage(request):
 
 def cornellPage(request):
     return render(request, 'cornell.html')
+
+def cnDownload(request):
+    pdfkit.from_url('http://localhost:8000/tnt-nlp/cornellPage', 'cornell.pdf')
+    return render(request, 'cornell.html')
+
 
 def resultPage(request):
     return render(request, 'result.html')

@@ -10,6 +10,7 @@ urlpatterns = [
     path('function/', views.functionPage, name="functionPage"),
     path('streaming/', views.streamingPage, name="streamingPage"),
     path('cornell/', views.cornellPage, name="cornellPage"),
+    path('cornell/download', views.cnDownload, name="cnDownload"),
     path('result/', views.resultPage, name="resultPage"),
     path('credit/', views.creditPage, name="creditPage"),
 ]
