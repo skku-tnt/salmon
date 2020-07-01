@@ -16,14 +16,17 @@ def home(request):
 def aboutPage(request):
     return render(request, 'about.html')
 
+def functionPage(request):
+    return render(request, 'function.html')
+
 def streamingPage(request):
     return render(request, 'streaming.html')
 
-def creditPage(request):
-    return render(request, 'credit.html')
-
-def preparePage(request):
-    return render(request, 'prepare.html')
-
 def cornellPage(request):
     return render(request, 'cornell.html')
+
+def resultPage(request):
+    return render(request, 'result.html')
+
+def creditPage(request):
+    return render(request, 'credit.html')
