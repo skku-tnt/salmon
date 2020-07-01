@@ -8,6 +8,8 @@ from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.http import HttpResponse
 import re, random
+import sys
+import os
 # from .models import Profile, Story, Region #적용할 모델들
 import pdfkit
 
@@ -27,9 +29,8 @@ def cornellPage(request):
     return render(request, 'cornell.html')
 
 def cnDownload(request):
-    pdfkit.from_url('http://localhost:8000/tnt-nlp/cornellPage', 'cornell.pdf')
+    pdfkit.from_url('http://localhost:8000/tnt-nlp/cornell', 'cornell.pdf')
     return render(request, 'cornell.html')
-
 
 def resultPage(request):
     return render(request, 'result.html')
