@@ -26,14 +26,28 @@ def streamingPage(request):
     return render(request, 'streaming.html')
 
 def cornellPage(request):
-    mynotes = Mynote.objects
+    mynotes = Mynote.objects.filter(auther="jungmin").first()
     return render(request, 'cornell.html', {'mynotes': mynotes})
 
 def cnDetail(request):
     return render(request, 'cornellDetail.html')
 
 def update(request):
-    return render(request, 'cornellDetail.html')
+    if request.method == "POST":
+        input_title = request.POST['title']
+        input_k1 = request.POST['k1']
+        input_k2 = request.POST['k2']
+        input_k3 = request.POST['k3']
+        input_k4 = request.POST['k4']
+        input_k5 = request.POST['k5']
+        input_note = request.POST['note']
+        input_summary = request.POST['summary']
+
+        Mynote.objects.get(auther="jungmin")
+
+
+
+    return render(request, 'cornell.html')
 
 def resultPage(request):
     return render(request, 'result.html')

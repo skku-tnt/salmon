@@ -16,16 +16,38 @@
     <div>
     <table border="2px" style="background-color: beige; border: solid 2px; border-color: black; border-collapse: collapse; width: 1200px; height: 600px;">
       <th width="200px" height="100px"></th>
-      <th style="font-size:30px; text-align: left; padding-left: 20px;"> {{ mynotes.first.title }} </th>
+      <th style="font-size:30px; text-align: left; padding-left: 20px;">
+        {% if mynotes.title is not None %}  
+          {{ mynotes.title }}
+        {% endif %}
+      </th>
       <tr><!-- 첫번째 줄 시작 -->
-          <td style="font-size: 25px; font-weight: bold; vertical-align: text-top; text-align: center;"> {{ mynotes.first.keyword1 }} <br> {{ mynotes.first.keyword2 }} <br>{{ mynotes.first.keyword3 }}</td>
-          <td>
-            <textarea placeholder="수업을 들으며 여기에 필기하세요" style="padding:10px; width:100%; height: 100%; background-color: beige; border: 0px; vertical-align: top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">{{ mynotes.first.content }}</textarea>
-        </td>
+          <td style="padding-top:15px; font-size: 20px; font-weight: bold; vertical-align: text-top; text-align: center;">
+            {% if mynotes.keyword1 is not  None %}
+              {{ mynotes.keyword1 }} <br><br>
+            {% elif mynotes.keyword is not None  %}
+              {{ mynotes.keyword2 }} <br><br>
+            {% elif mynotes.keyword is not None %}
+              {{ mynotes.keyword3 }} <br><br>
+            {% elif mynotes.keyword is not None %}
+              {{ mynotes.keyword4 }} <br><br>
+            {% elif mynotes.keyword is not None %}
+              {{ mynotes.keyword5 }}
+            {% endif %}
+          </td>
+          <td style="padding:10px; width:1000px; height: 400px; background-color: beige; border: 0px; vertical-align:top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">
+            {% if mynotes.content is not None %}
+              {{ mynotes.content }}
+            {% endif %}
+          </td>
       </tr><!-- 첫번째 줄 끝 -->
       <tr><!-- 두번째 줄 시작 -->
           <td></td>
-          <td style="font-size: 30px; height: 100px; padding-left: 20px; text-align: left;">{{ mynotes.first.summary }}</td>
+          <td style="font-size: 30px; height: 100px; padding-left: 20px; text-align: left;">
+            {% if mynotes.summary is not None %}
+              {{ mynotes.summary }}
+            {% endif %}
+          </td>
       </tr><!-- 두번째 줄 끝 -->
         </table>
       </div>
@@ -33,7 +55,7 @@
 
   <br>
     <input type="button" value="수정하기" onClick="location.href='detail'" style="width: 150px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
-    <input type="button" value="키워드 보여주기" onClick="location.href='#'" style="width: 150px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
+    <input type="button" value="키워드 보여주기" onClick="location.href='#'" style="width: 180px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
     <input type="button" value="요약 보여주기" onClick="location.href='#'" style="width: 150px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
 
 
