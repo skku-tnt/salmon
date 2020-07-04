@@ -54,9 +54,9 @@
     z-index: 0;
   }
 #button-style{
-    background-color: green;
+    background-color: rgb(255, 253, 119);
     font-size: 20px;
-    width: 50px;
+    width: 300px;
 }
   mark{
     font-weight:bold;
