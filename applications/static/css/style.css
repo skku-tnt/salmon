@@ -53,7 +53,12 @@
     position: absolute;
     z-index: 0;
   }
-mark{
+#button-style{
+    background-color: green;
+    font-size: 20px;
+    width: 50px;
+}
+  mark{
     font-weight:bold;
 
     background-color:rgba(255,0,0,0.2);
