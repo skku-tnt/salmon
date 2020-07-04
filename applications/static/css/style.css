@@ -28,30 +28,30 @@
 }
 
 #main-line{
-    border: 0.1px solid;
-    color:  rgb(53, 53, 53);
+    border: 1px solid;
+    color:  black;
     margin-top: 30px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 #main-line2{
     border: 2px solid;
-    color: rgb(53, 53, 53);
+    color: black;
     margin-top: 30px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
 }
 
 #vertical-line{
     width: 3px; /* Line width */
-    background-color:  rgb(53, 53, 53); /* Line color */
+    background-color:  black; /* Line color */
     height: 100%; /* Override in-line if you want specific height. */
     float: left; /* Causes the line to float to left of content. 
       You can instead use position:absolute or display:inline-block
       if this fits better with your design */
-    margin-right: 1100px;
+    margin-left: 200px;
     position: absolute;
-    z-index: -1;
+    z-index: 0;
   }
 mark{
     font-weight:bold;
