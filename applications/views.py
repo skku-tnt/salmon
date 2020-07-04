@@ -32,6 +32,9 @@ def cornellPage(request):
 def cnDetail(request):
     return render(request, 'cornellDetail.html')
 
+def update(request):
+    return render(request, 'cornellDetail.html')
+
 def resultPage(request):
     return render(request, 'result.html')
 
