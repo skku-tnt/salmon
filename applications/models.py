@@ -10,6 +10,8 @@ class Mynote(models.Model):
     keyword1   = models.CharField('키워드1', max_length=12, null=True)
     keyword2   = models.CharField('키워드2', max_length=12, null=True)
     keyword3   = models.CharField('키워드3', max_length=12, null=True)
+    keyword4   = models.CharField('키워드4', max_length=12, null=True)
+    keyword5   = models.CharField('키워드5', max_length=12, null=True)
     content    = models.TextField('내용', null=False)
     summary    = models.TextField('요악', null=False)
 

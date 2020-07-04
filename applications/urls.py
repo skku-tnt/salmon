@@ -14,5 +14,5 @@ urlpatterns = [
     path('cornell/detail', views.cnDetail, name="cnDetail"),
     path('result/', views.resultPage, name="resultPage"),
     path('credit/', views.creditPage, name="creditPage"),
-
+    path('notepost/', views.notepost, name="notepost"),
 ]
