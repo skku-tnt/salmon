@@ -7,6 +7,7 @@ from django.contrib.auth import login, authenticate
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.http import HttpResponse
+from .models import Mynote
 import re, random, sys, os
 import pdfkit
 # from .models import Profile, Story, Region #적용할 모델들
@@ -25,7 +26,8 @@ def streamingPage(request):
     return render(request, 'streaming.html')
 
 def cornellPage(request):
-    return render(request, 'cornell.html')
+    mynotes = Mynote.objects
+    return render(request, 'cornell.html', {'mynotes': mynotes})
 
 def cnDetail(request):
     return render(request, 'cornellDetail.html')
@@ -35,3 +37,6 @@ def resultPage(request):
 
 def creditPage(request):
     return render(request, 'credit.html')
+
+
+    
