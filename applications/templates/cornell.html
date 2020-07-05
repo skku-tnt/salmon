@@ -23,15 +23,19 @@
       </th>
       <tr><!-- 첫번째 줄 시작 -->
           <td style="padding-top:15px; font-size: 20px; font-weight: bold; vertical-align: text-top; text-align: center;">
-            {% if mynotes.keyword1 is not  None %}
+            {% if mynotes.keyword1 is not None %}
               {{ mynotes.keyword1 }} <br><br>
-            {% elif mynotes.keyword is not None  %}
+            {% endif %}
+            {% if mynotes.keyword2 is not None %}
               {{ mynotes.keyword2 }} <br><br>
-            {% elif mynotes.keyword is not None %}
+            {% endif %}
+            {% if mynotes.keyword3 is not None %}
               {{ mynotes.keyword3 }} <br><br>
-            {% elif mynotes.keyword is not None %}
+            {% endif %}
+            {% if mynotes.keyword4 is not None %}
               {{ mynotes.keyword4 }} <br><br>
-            {% elif mynotes.keyword is not None %}
+            {% endif %}
+            {% if mynotes.keyword5 is not None %}
               {{ mynotes.keyword5 }}
             {% endif %}
           </td>

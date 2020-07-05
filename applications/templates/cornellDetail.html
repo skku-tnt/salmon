@@ -2,9 +2,8 @@
 
 {% block content %}
 <!-- !PAGE CONTENT! -->
-  
-{{ mynotes.all }}
-  
+
+
 
 <div class="w3-main" style="margin-left:120px;text-align: center;">
 <br>
@@ -14,28 +13,34 @@
   <table border="2px" style="background-color: beige; border: solid 2px; border-color: black; border-collapse: collapse; width: 1200px; height: 600px;">
     <th width="200px" height="100px"></th>
     <th style="font-size:30px; text-align: left;">
-      <input type="text" style="width:1000px; height:100px; background-color: beige; border : 0px;" name="title" value="1. 온달장군과 평강공주">
+      <input type="text" style="width:1000px; height:100px; background-color: beige; border : 0px;" name="title"
+        value="{% if mynotes.title is not None %}{{ mynotes.title }}{% endif %}">
     </th>
     <tr><!-- 첫번째 줄 시작 -->
         <td style="font-size: 25px; font-weight: bold; vertical-align: text-top; text-align: center;">
           <br>
-          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k1" value="keyword 1">
+          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k1" 
+            value="{% if mynotes.keyword1 is not None %}{{ mynotes.keyword1 }}{% endif %}">
           <br><br>
-          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k2" value="keyword 2">
+          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k2" 
+            value="{% if mynotes.keyword2 is not None %}{{ mynotes.keyword2 }}{% endif %}">
           <br><br>
-          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k3" value="keyword 3">
+          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k3" 
+            value="{% if mynotes.keyword3 is not None %}{{ mynotes.keyword3 }}{% endif %}">
           <br><br>
-          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k4" value="keyword 4">
+          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k4" 
+            value="{% if mynotes.keyword4 is not None %}{{ mynotes.keyword4 }}{% endif %}">
           <br><br>
-          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k5" value="keyword 5">
+          <input type="text" style="width:160px; background-color: beige; border : 0px;" name="k5" 
+            value="{% if mynotes.keyword5 is not None %}{{ mynotes.keyword5 }}{% endif %}">
         <td>
-          <textarea name="note"style="padding:20px; width:100%; height: 100%; background-color: beige; border: 0px; vertical-align: top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">수업을 들으며 여기에 필기하세요</textarea>
+          <textarea name="note"style="padding:20px; width:100%; height: 100%; background-color: beige; border: 0px; vertical-align: top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">{% if mynotes.content is not None %}{{ mynotes.content }}{% endif %}</textarea>
         </td>
     </tr><!-- 첫번째 줄 끝 -->
     <tr><!-- 두번째 줄 시작 -->
         <td></td>
         <td style="font-size: 30px; height: 100px; text-align: left;">
-          <input type="text" style="width:1000px; height:100px; background-color: beige; border : 0px;" name="summary" value="요약">
+          <input type="text" style="width:1000px; height:100px; background-color: beige; border : 0px;" name="summary" value="{% if mynotes.summary is not None %}{{ mynotes.summary }}{% endif %}">
     
         </td>
     </tr><!-- 두번째 줄 끝 -->

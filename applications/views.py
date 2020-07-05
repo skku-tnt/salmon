@@ -30,7 +30,8 @@ def cornellPage(request):
     return render(request, 'cornell.html', {'mynotes': mynotes})
 
 def cnDetail(request):
-    return render(request, 'cornellDetail.html')
+    mynotes = Mynote.objects.filter(auther="jungmin").first()
+    return render(request, 'cornellDetail.html', {'mynotes': mynotes})
 
 def update(request):
     if request.method == "POST":
@@ -43,11 +44,18 @@ def update(request):
         input_note = request.POST['note']
         input_summary = request.POST['summary']
 
-        Mynote.objects.get(auther="jungmin")
-
-
-
-    return render(request, 'cornell.html')
+        mynote = Mynote.objects.filter(auther="jungmin").first()
+        mynote.title = input_title
+        mynote.keyword1 = input_k1
+        mynote.keyword2 = input_k2
+        mynote.keyword3 = input_k3
+        mynote.keyword4 = input_k4
+        mynote.keyword5 = input_k5
+        mynote.content = input_note
+        mynote.summary = input_summary
+        mynote.save()
+        
+    return redirect('/tnt-nlp/cornell')
 
 def resultPage(request):
     return render(request, 'result.html')
