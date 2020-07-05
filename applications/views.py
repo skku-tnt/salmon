@@ -55,7 +55,7 @@ def update(request):
         mynote.summary = input_summary
         mynote.save()
         
-    return redirect('/tnt-nlp/cornell')
+    return render(request, 'update.html')
 
 def resultPage(request):
     return render(request, 'result.html')
