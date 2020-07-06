@@ -8,9 +8,7 @@ from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.http import HttpResponse
 from .models import Mynote
-import re, random, sys, os
-import pdfkit
-# from .models import Profile, Story, Region #적용할 모델들
+import re, random
 
 
 def home(request):
