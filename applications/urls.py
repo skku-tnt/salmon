@@ -11,6 +11,7 @@ urlpatterns = [
     path('streaming/', views.streamingPage, name="streamingPage"),
     path('cornell/', views.cornellPage, name="cornellPage"),
     path('cornell/detail', views.cnDetail, name="cnDetail"),
+    path('cornell/download', views.downloadCornell, name="downloadCornell"),
     path('cornell/detail/update', views.update, name="update"),
     path('result/', views.resultPage, name="resultPage"),
     path('credit/', views.creditPage, name="creditPage"),
