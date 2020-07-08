@@ -3,27 +3,40 @@
 {% block content %}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:120px;">
-    <div id="header" style="border:1px solid black">
-        header
+    <div id='streamHeader' style='margin-top:10px'>
     </div>
     
-    <div id="vands" style="margin-left:30px;border:1px solid black;width:100%">
-    
-        <div id="videoArea" style="display:inline-block;width:60%;">
-            <video id="myVideo" class="video-js" controls preload="auto" data-setup="{}" style="width:100%; ">
-                <source src="/static/video/vivid.mp4" type="video/mp4" />
+    {% comment %} 학습하기 {% endcomment %}
+    <div id="playerArea" style="margin-left:30px;margin-right:30px;width:80%;margin-bottom:50px;">
+        <h2>학습하기</h2>
+        {% comment %} 동영상 플레이어 {% endcomment %}
+        <div id="videoArea" style="display:inline-block;width:100%;">
+            <video id="myVideo" width="90%" controls>
+                <source src="/static/video/sample.mp4" type='video/mp4'>
             </video>
-        </div>
-        <div id="scriptArea" style="display:inline-block;width:30%;margin-left:1%;">
-            <p>스</p>
-            <p>크</p>
-            <p>립</p>
-            <p>트</p>
         </div>
     </div>
 
-    <div id="summaryArea" style="border:1px solid black;">
-        
+    {% comment %} 스크립트 {% endcomment %}
+    <div id="scriptArea" style="margin-left:30px;margin-right:30px;width:100%; margin-bottom:50px;">
+        <h2>스크립트</h2>
+        <button id="scriptBtn" onclick="scriptToggle();">스크립트 열기</button>
+        <div id="scriptValue" style="margin-top:20px; padding-left:10px; font-family:'Nanum Gothic'; display:none; border:0.5px solid black;">
+<pre>
+스크립트가 있었다면
+내가 이렇게 직접 치지도 않고
+얼마나 좋았을까
+하는 생각이 들긴하는데
+레이아웃잡을려면
+이렇게 직접 쳐보는 수 밖에 없는 현실에ㅔ
+눈물이 또르르
+</pre>
+        </div>
+    </div>
+
+    {% comment %} 퀴즈 {% endcomment %}
+    <div id="quizArea" style="margin-left:30px;margin-right:30px;width:100%; margin-bottom:50px;">
+        <h2>퀴즈</h2>
         <button type="button" onclick="moveTime()">20초로 이동하기</button>
         <br>
         summary
@@ -37,6 +50,18 @@ function moveTime() {
     myVideo.currentTime = 20;
 }
 
+function scriptToggle() {
+    var scBtn = document.getElementById('scriptBtn')
+    var sc = document.getElementById('scriptValue').style;
+
+    if (sc.display === "none") {
+        sc.display = "block";
+        scBtn.innerText = "스크립트 닫기";
+    } else {
+        sc.display = "none";
+        scBtn.innerText = "스크립트 열기";
+    }
+}
 </script>
     
 <!-- End page content -->
