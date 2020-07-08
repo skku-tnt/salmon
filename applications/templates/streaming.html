@@ -8,9 +8,10 @@
     </div>
     
     <div id="vands" style="margin-left:30px;border:1px solid black;width:100%">
+    
         <div id="videoArea" style="display:inline-block;width:60%;">
-            <video id="myVideo" oncontextmenu="return false;" width="100%" controls autoplay
-                src="/static/video/vivid.mp4" type="video/mp4">
+            <video id="myVideo" class="video-js" controls preload="auto" data-setup="{}" style="width:100%; ">
+                <source src="/static/video/vivid.mp4" type="video/mp4" />
             </video>
         </div>
         <div id="scriptArea" style="display:inline-block;width:30%;margin-left:1%;">
