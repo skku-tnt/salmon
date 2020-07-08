@@ -11,6 +11,7 @@ from .models import Mynote
 import re, random
 import os, sys
 from PIL import Image, ImageDraw, ImageFont
+import img2pdf
 
 def home(request):
     return render(request, 'intro.html')
@@ -34,7 +35,12 @@ def cnDetail(request):
 
 def downloadCornell(request):
     createCornell()
-    return render(request, 'download.html')
+    imgToPdf('applications/static/img/cornell.jpg')
+
+    response = HttpResponse(open('applications/static/pdf/cornell.pdf', 'rb').read())
+    response['Content-Type'] = 'application/pdf'
+    response['Content-Disposition'] = 'attachment; filename=cornell.pdf'
+    return response
 
 def createCornell():
     mynote = Mynote.objects.filter(auther="jungmin").first()
@@ -125,6 +131,10 @@ def createCornell():
     d.text((posSummaryX, posSummaryY), summary, font=fontTiSu, fill='black')
 
     img.save('applications/static/img/cornell.jpg')
+
+def imgToPdf(img):
+    with open("applications/static/pdf/cornell.pdf","wb") as f:
+	    f.write(img2pdf.convert(img))
 
 def update(request):
     if request.method == "POST":
