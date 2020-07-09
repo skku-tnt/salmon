@@ -13,6 +13,10 @@ function loadQuiz() {
         var quizArea = document.getElementById('quizArea');
         quizArea.style.display = 'block';
     }
+    if (player.currentTime >= 25 && player.currentTime < 25.1) {
+        var quizArea = document.getElementById('quizArea');
+        quizArea.style.display = 'none';
+    }
 }
 
 function moveTime(timestamp) {
