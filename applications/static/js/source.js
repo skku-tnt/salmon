@@ -1,24 +1,3 @@
-window.onload = function () {
-    setInterval(loadQuiz, 100);
-};
-
-function loadQuiz() {
-    var player = document.getElementById('myVideo');
-    if (player.currentTime >= 20 && player.currentTime < 20.1) {
-        player.pause();
-
-        if (player.webkitDisplayingFullscreen) {
-            document.webkitCancelFullScreen();
-        }
-        var quizArea = document.getElementById('quizArea');
-        quizArea.style.display = 'block';
-    }
-    if (player.currentTime >= 25 && player.currentTime < 25.1) {
-        var quizArea = document.getElementById('quizArea');
-        quizArea.style.display = 'none';
-    }
-}
-
 function moveTime(timestamp) {
     if (timestamp === 'quiz1'){
         var time = 20;

@@ -3,18 +3,18 @@
 {% block content %}
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:120px;">
-    <div id='streamHeader' style='margin-top:10px'>
+    <div id='streamHeader'>
     </div>
     
-    <table width="100%" style="margin-bottom:50px;">
+    <table width="100%" style="margin-top:30px; margin-bottom:50px;">
         <tr>
             <td width="60%">
                 {% comment %} 학습하기 {% endcomment %}
                 <div id="playerArea" style="margin-left:30px;width:90%;">
-                    <h2>학습하기</h2>
+                    <h1>Lecture Video</h1>
                     {% comment %} 동영상 플레이어 {% endcomment %}
-                    <div id="videoArea" style="display:inline-block;width:100%;">
-                        <video id="myVideo" width="95%" controls>
+                    <div id="videoArea" style="margin-top:15px; display:inline-block;width:95%;">
+                        <video id="myVideo" width="100%" controls style='border-radius: 30px;'>
                             <source src="/static/video/sample.mp4" type='video/mp4'>
                         </video>
                     </div>
@@ -22,31 +22,44 @@
             </td>
             <td>
                 {% comment %} 퀴즈 {% endcomment %}
-                <div id="quizArea" style="width:100%; display:none;">
-                    <h2>Quiz</h2>
-                    <div id='quizSlide1' style="margin-bottom:15px;">
-                        <table width="400px" height="300px" cellspacing="5" style="fond-family:'Nanum Gothic'; text-align:center; border:1px solid black; border-radius: 5%;">
-                            <tr height="100px">
-                                <th colspan="2" bgcolor="#d5e8bb">keyword : 피자</th>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#d5e8bb" width="100px">
-                                    <a onclick="moveTime('quiz1');">00:20</a>
-                                </td>
-                                <td>
-                                    <a onclick="questionToggle('quiz1');">
-                                        <div id='quizDiv1' style="background-color:#d5e8bb; width:100%; height:100%; line-height: 200px;";>
-                                            피자는 어디서 처음으로?
-                                        </div>
-                                    </a>
-                                    <a onclick="questionToggle('quiz1');">
-                                        <div id='ansDiv1' style="background-color:#adbc98; width:100%; height:100%; display:none;  line-height: 200px;";>
-                                            이탈리아
-                                        </div>
-                                    </a>
-                                </td>
-                            </tr>
-                        </table>
+                <div style="width:400px; height:373px">
+                    <div id="quizArea" style="width:100%; display:none; padding-right:20px;">
+                        <h1>Quiz</h1>
+                        <div id='quizSlide1' style="margin-top:25px; background-image:url('/static/svg/quizBoard.svg'); background-repeat:no-repeat; backgroud-size:100% 100%;">
+                            <p>강의 영상 00:20 로부터 생성된 퀴즈입니다.</p>
+                            <br>
+                            <span style='margin-right:10px; border :1px solid black;'>pizza</span>
+                            <span style='margin-right:10px; border :1px solid black;'>pasta</span>
+                            <br><br>
+                            <p style='font-weight:bold'>피자는 어느 나라에서 만들어졌을까요?</p>
+                            <br>
+                            <a onclick="questionToggle('quiz1')"><div>Click!</div></a>
+                        </div>
+
+                        {% comment %} 
+                            <table width="400px" height="300px" cellspacing="5" style="fond-family:'Nanum Gothic'; text-align:center; border:1px solid black; border-radius: 5%;">
+                                <tr height="100px">
+                                    <th colspan="2" bgcolor="#d5e8bb">keyword : 피자</th>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#d5e8bb" width="100px">
+                                        <a onclick="moveTime('quiz1');">00:20</a>
+                                    </td>
+                                    <td>
+                                        <a onclick="questionToggle('quiz1');">
+                                            <div id='quizDiv1' style="background-color:#d5e8bb; width:100%; height:100%; line-height: 200px;";>
+                                                피자는 어디서 처음으로?
+                                            </div>
+                                        </a>
+                                        <a onclick="questionToggle('quiz1');">
+                                            <div id='ansDiv1' style="background-color:#adbc98; width:100%; height:100%; display:none;  line-height: 200px;";>
+                                                이탈리아
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div> {% endcomment %}
                     </div>
                 </div>
             </td>
@@ -56,7 +69,7 @@
 
     {% comment %} 스크립트 {% endcomment %}
     <div id="scriptArea" style="margin-left:30px;margin-right:30px;width:100%; margin-bottom:50px;">
-        <h2>스크립트</h2>
+        <h1>Script</h1>
         <button id="scriptBtn" onclick="scriptToggle();">스크립트 열기</button>
         <div id="scriptValue" style="margin-top:20px; padding-left:10px; font-family:'Nanum Gothic'; display:none; border:0.5px solid black;">
 <pre>
