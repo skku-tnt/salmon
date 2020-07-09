@@ -39,7 +39,7 @@
 
   <br>
     <div style="margin-left:50px;">
-    <table border="1px" align="center" style="  background-color: white; border-radius:5%; border: solid 0px; border-collapse: collapse; width: 1000px; height: 600px;  ">
+    <table border="1px" align="center" style="background-color: white; border-radius:5%; border: solid 0px; border-collapse: collapse; width: 1000px; height: 600px;">
       <th colspan=2 style="font-size:30px; text-align: left; padding-left: 50px; padding-top: 40px; border-bottom-color:#C5C5C5; " height="100px">
         {% if mynotes.title is not None %}  
           {{ mynotes.title }}
@@ -84,7 +84,7 @@
   <br>
     <input type="button" value="수정하기" onClick="location.href='detail'" style="width: 150px; background-color: #054FD3; margin-right:10px; font-size: 16px; border-radius: 17px; border-collapse: collapse; color: white; border: 0px;">
     <input type="button"  data-toggle="modal" data-target="#myModal" value="키워드 & 요약" onClick="modalKeyword()" style="width: 180px; background-color: #054FD3; font-size: 16px; border-radius: 17px; border-collapse: collapse; color:white; border:0px; margin-right:5px;  ">
-    <button type="button" style="border: none; outline:none; background:none;">
+    <button type="button" onClick="location.href='download'" style="border: none; outline:none; background:none;">
       <img src='/static/svg/export.svg' width="30px" height="30px" >
     </button> 
 
