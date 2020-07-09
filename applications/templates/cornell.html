@@ -39,15 +39,14 @@
 
   <br>
     <div style="margin-left:50px;">
-    <table border="2px" style="background-color: beige; border: solid 2px; border-color: black; border-collapse: collapse; width: 1200px; height: 600px;">
-      <th width="200px" height="100px"></th>
-      <th style="font-size:30px; text-align: left; padding-left: 20px;">
+    <table border="1px" align="center" style="  background-color: white; border-radius:5%; border: solid 0px; border-collapse: collapse; width: 1000px; height: 600px;  ">
+      <th colspan=2 style="font-size:30px; text-align: left; padding-left: 50px; padding-top: 40px; border-bottom-color:#C5C5C5; " height="100px">
         {% if mynotes.title is not None %}  
           {{ mynotes.title }}
         {% endif %}
       </th>
-      <tr><!-- 첫번째 줄 시작 -->
-          <td style="padding-top:15px; font-size: 20px; font-weight: bold; vertical-align: text-top; text-align: center;">
+      <tr style="border-color:#C5C5C5; border-left: 0px;"><!-- 첫번째 줄 시작 -->
+          <td width="200px" style="padding-top:15px; border-top-color:#C5C5C5; font-size: 20px; font-weight: bold; vertical-align: text-top; text-align: center; border-top-color:#C5C5C5; border-bottom-color: #C5C5C5;">
             {% if mynotes.keyword1 is not None %}
               {{ mynotes.keyword1 }} <br><br>
             {% endif %}
@@ -64,15 +63,14 @@
               {{ mynotes.keyword5 }}
             {% endif %}
           </td>
-          <td style="padding:10px; width:1000px; height: 400px; background-color: beige; border: 0px; vertical-align:top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">
+          <td style="padding:10px; width:1000px; height: 400px; border-top-color:#C5C5C5; background-color: white; border: 0px; vertical-align:top; word-wrap: hard; Word-wrap: break-Word; Word-break: break-all;">
             {% if mynotes.content is not None %}
               {{ mynotes.content }}
             {% endif %}
           </td>
       </tr><!-- 첫번째 줄 끝 -->
-      <tr><!-- 두번째 줄 시작 -->
-          <td></td>
-          <td style="font-size: 30px; height: 100px; padding-left: 20px; text-align: left;">
+      <tr style="border-top-color:#C5C5C5;"><!-- 두번째 줄 시작 -->
+          <td style="font-size: 20px; height: 100px; padding-left: 50px; text-align: left;" colspan="2">
             {% if mynotes.summary is not None %}
               {{ mynotes.summary }}
             {% endif %}
@@ -84,9 +82,11 @@
 
 
   <br>
-    <input type="button" value="수정하기" onClick="location.href='detail'" style="width: 150px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
-    <input type="button"  data-toggle="modal" data-target="#myModal" value="키워드 & 요약" onClick="modalKeyword()" style="width: 180px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
-    <input type="button" value="다운받기" onClick="location.href='download'" style="width: 150px; background-color: rgb(214, 206, 255); font-size: 20px; border-radius: 10px; border-collapse: collapse">
+    <input type="button" value="수정하기" onClick="location.href='detail'" style="width: 150px; background-color: #054FD3; margin-right:10px; font-size: 16px; border-radius: 17px; border-collapse: collapse; color: white; border: 0px;">
+    <input type="button"  data-toggle="modal" data-target="#myModal" value="키워드 & 요약" onClick="modalKeyword()" style="width: 180px; background-color: #054FD3; font-size: 16px; border-radius: 17px; border-collapse: collapse; color:white; border:0px; margin-right:5px;  ">
+    <button type="button" style="border: none; outline:none; background:none;">
+      <img src='/static/svg/export.svg' width="30px" height="30px" >
+    </button> 
 
 
   <!-- End page content -->
