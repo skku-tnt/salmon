@@ -160,11 +160,5 @@ def update(request):
         
     return render(request, 'update.html')
 
-def resultPage(request):
-    return render(request, 'result.html')
-
-def creditPage(request):
-    return render(request, 'credit.html')
-
 
     
