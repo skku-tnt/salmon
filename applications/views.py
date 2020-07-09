@@ -16,9 +16,6 @@ import img2pdf
 def home(request):
     return render(request, 'intro.html')
 
-def aboutPage(request):
-    return render(request, 'about.html')
-
 def functionPage(request):
     return render(request, 'function.html')
 
