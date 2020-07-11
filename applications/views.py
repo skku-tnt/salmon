@@ -32,6 +32,8 @@ def cnDetail(request):
 
 def downloadCornell(request):
     createCornell()
+    # linux
+    # os.chdir("/root/salmon/")
     imgToPdf('applications/static/img/cornell.jpg')
 
     response = HttpResponse(open('applications/static/pdf/cornell.pdf', 'rb').read())
@@ -84,6 +86,8 @@ def createCornell():
             contentList.append(content[38*i:38*(i+1)])
             currentLen = 38*(i+1)
 
+    # linux
+    # os.chdir("/root/salmon/")
     img = Image.open("applications/static/img/note.jpg")
     fontTiSu = ImageFont.truetype("applications/static/font/nseb.ttf", 30, encoding="UTF-8")
     fontKeCo = ImageFont.truetype("applications/static/font/nsb.ttf", 20, encoding="UTF-8")
