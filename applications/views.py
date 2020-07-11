@@ -69,22 +69,34 @@ def createCornell():
     else:
         keywordList.append("")
 
+    lineLength = 48
+
     content = mynote.content
-    listNum = int(len(content)/38)
-    if (len(content) != listNum*38):
+    listNum = int(len(content)/lineLength)
+    if (len(content) != listNum*lineLength):
         listNum = listNum + 1
 
     contentList = []
     currentLen = 0
-    for i in range(0,9):
-        if (currentLen + 38 >= len(content)):
-            contentList.append(content[currentLen:])
-            for j in range(i+1,9):
+    enter = "\n"
+    for i in range(0,10):
+        if (currentLen + lineLength >= len(content)):
+            if enter in content[currentLen:]:
+                contentList.append(content[currentLen:content[currentLen:].find(enter)])
+            else:
+                contentList.append(content[currentLen:])
+            for j in range(i+1,10):
                 contentList.append("")
             break
         else:
-            contentList.append(content[38*i:38*(i+1)])
-            currentLen = 38*(i+1)
+            if enter in content[currentLen: currentLen+lineLength]:
+                enterIndex = content[currentLen: currentLen+lineLength].find(enter)
+                contentList.append(content[currentLen: currentLen + enterIndex + 1])
+                currentLen = currentLen + enterIndex + 1
+            else:
+                contentList.append(content[currentLen: currentLen+lineLength])
+                currentLen = currentLen + lineLength
+            
 
     # linux
     # os.chdir("/root/salmon/")
@@ -100,7 +112,7 @@ def createCornell():
     posKeywordY = [100, 135, 170, 205, 240]
     # content
     posContentX = 220
-    posContentY = [100, 135, 170, 205, 240, 275, 310, 345, 380]
+    posContentY = [100, 135, 170, 205, 240, 275, 310, 345, 380, 425]
     # summary
     posSummaryX = 50
     posSummaryY = 500
@@ -127,6 +139,7 @@ def createCornell():
     d.text((posContentX, posContentY[6]), contentList[6], font=fontKeCo, fill='black')
     d.text((posContentX, posContentY[7]), contentList[7], font=fontKeCo, fill='black')
     d.text((posContentX, posContentY[8]), contentList[8], font=fontKeCo, fill='black')
+    d.text((posContentX, posContentY[9]), contentList[9], font=fontKeCo, fill='black')
 
     # summary
     d.text((posSummaryX, posSummaryY), summary, font=fontTiSu, fill='black')
