@@ -20,7 +20,14 @@ def functionPage(request):
     return render(request, 'function.html')
 
 def streamingPage(request):
-    return render(request, 'streaming.html')
+
+    # linux
+    # os.chdir("/root/salmon/")
+    text = open('applications/static/script/script.txt', 'r', encoding='UTF8')
+    lines = text.readlines()
+    text.close()
+
+    return render(request, 'streaming.html', {'lines':lines})
 
 def cornellPage(request):
     mynotes = Mynote.objects.filter(auther="jungmin").first()

@@ -50,14 +50,12 @@
     <div id="scriptArea" style="margin-left:30px; width:800px; height:600px">
         <h1>Script</h1>
         <button id="scriptBtn" onclick="scriptToggle();">스크립트 열기</button>
-        <div id="scriptValue" style="margin-top:10px;display:none; background-image:url('/static/svg/quizBoard.svg'); background-repeat:no-repeat; background-size:cover;">
-            <div style="margin-left:30px; height:420px"><br><br>
-                dasd<br>
-                dasd<br>
-                dasd<br>
-                dasd<br>
-                dasd<br>
-                dasd<br>
+        <div id="scriptValue" style="margin-top:10px;display:none;">
+            <div style="margin-left:30px; padding: 0px 30px 10px 10px"><br><br>
+                {% for line in lines %}
+                    {{ line }}
+                    <br>
+                {% endfor %}
             </div>
         </div>
     </div>
