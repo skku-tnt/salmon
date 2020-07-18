@@ -2,7 +2,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 
 #txt 파일 가져와서 text로 저장하기
-f = open("/Users/huhyoujung/Desktop/코딥/lecture_note10.txt", 'r')
+f = open("/Users/huhyoujung/Desktop/코딥/lecture_note10.txt", 'r', encoding="UTF-8")
 list = []
 for line in f.readlines():
     try:
