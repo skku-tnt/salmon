@@ -98,7 +98,7 @@
         }
 
         .right_middle_content_right {
-            border-left:1px solid gray;
+            border-left:0.5px solid #AAAAAA;
             margin-left:30%;
             padding-left:5%;
             padding-right:5%;
@@ -114,6 +114,25 @@
             width:95%;
             border-radius:7px;
         }
+        #myTitle{
+            font-family: 'Noto Sans KR Medium', sans-serif;
+            size: 36pt;
+            color: #5D5D5D;
+
+        }
+        #firstContent{
+            color:#A0A0A0; 
+            font-family: 'Noto Sans KR Medium', sans-serif;
+            size: 14pt;
+            line-height: 21pt;
+        }
+        #keywordStyle{
+            color:#757575;
+            font-family: 'Noto Sans KR Medium', sans-serif;
+            size: 18pt
+        }
+
+
         </style>
     </head>
     <body>
@@ -147,7 +166,7 @@
                     <a onclick="ans('quiz3');"><div id='ans3'>정답을 보려면 클릭하세요. Click!</div></a>
                 </div>
             </div>
-            <div class='left_bottom'>
+            <div class='left_bottom' id='firstContent'>
                 <h2>강의 스크립트</h2><br>
                 {% for line in lines %}
                     {{ line }}
@@ -164,7 +183,7 @@
             </div>
             <div>
                 <div class='right_middle_title'>
-                    <h2>
+                    <h2 id="myTitle">
                         {% if mynotes.title is not None %}  
                             {{ mynotes.title }}
                         {% endif %}
@@ -179,7 +198,7 @@
                     </button>
                 </div>
                 <div class='right_middle_content'>
-                    <div class='right_middle_content_left'>
+                    <div class='right_middle_content_left' id='keywordStyle'>
                         {% if mynotes.keyword1 is not None %}
                             {{ mynotes.keyword1 }} <br><br>
                         {% endif %}
@@ -196,13 +215,13 @@
                             {{ mynotes.keyword5 }}
                         {% endif %}
                     </div>
-                    <div class='right_middle_content_right'>
+                    <div class='right_middle_content_right' id='firstContent'>
                         {% if mynotes.content is not None %}
                             {{ mynotes.content }}
                         {% endif %}
                     </div>
                 </div>
-                <div class='right_bottom'>
+                <div class='right_bottom' id='firstContent'>
                     {% if mynotes.summary is not None %}
                         {{ mynotes.summary }}
                     {% endif %}
