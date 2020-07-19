@@ -6,10 +6,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home, name="home"),
-    path('function/', views.functionPage, name="functionPage"),
-    path('streaming/', views.streamingPage, name="streamingPage"),
-    path('cornell/', views.cornellPage, name="cornellPage"),
-    path('cornell/detail', views.cnDetail, name="cnDetail"),
-    path('cornell/download', views.downloadCornell, name="downloadCornell"),
-    path('cornell/detail/update', views.update, name="update"),
+    path('cornell', views.cornell, name="cornell"),
+    path('download', views.downloadCornell, name="downloadCornell"),
+    path('cornell/update', views.update, name="update"),
 ]

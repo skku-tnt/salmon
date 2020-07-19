@@ -14,12 +14,8 @@ from PIL import Image, ImageDraw, ImageFont
 import img2pdf
 
 def home(request):
-    return render(request, 'home.html')
 
-def functionPage(request):
-    return render(request, 'function.html')
-
-def streamingPage(request):
+    mynotes = Mynote.objects.filter(auther="jungmin").first()
 
     # linux
     # os.chdir("/root/salmon/")
@@ -27,13 +23,9 @@ def streamingPage(request):
     lines = text.readlines()
     text.close()
 
-    return render(request, 'streaming.html', {'lines':lines})
+    return render(request, 'home.html', {'mynotes':mynotes, 'lines':lines})
 
-def cornellPage(request):
-    mynotes = Mynote.objects.filter(auther="jungmin").first()
-    return render(request, 'cornell.html', {'mynotes': mynotes})
-
-def cnDetail(request):
+def cornell(request):
     mynotes = Mynote.objects.filter(auther="jungmin").first()
     return render(request, 'cornellDetail.html', {'mynotes': mynotes})
 
