@@ -1,9 +1,9 @@
-function questionToggle(quesName) {
+function ans(quesName) {
     if (quesName === 'quiz1') {
         var a = document.getElementById('ans1');
         a.innerText = '정답 : 종교개혁';
     } else if (quesName === 'quiz2') {
-        var a = document.getElementBㅉyId('ans2');
+        var a = document.getElementById('ans2');
         a.innerText = '정답 : 로마 카톨릭교';
     } else if (quesName === 'quiz3') {
         var a = document.getElementById('ans3');
