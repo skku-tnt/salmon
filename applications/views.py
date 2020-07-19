@@ -14,7 +14,7 @@ from PIL import Image, ImageDraw, ImageFont
 import img2pdf
 
 def home(request):
-    return render(request, 'intro.html')
+    return render(request, 'home.html')
 
 def functionPage(request):
     return render(request, 'function.html')
