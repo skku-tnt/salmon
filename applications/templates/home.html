@@ -9,7 +9,8 @@
 
         <link href="/static/img/favicon.ico" rel="icon" type="image/x-icon" />
         <script src="/static/js/answer.js"></script>
-        <script src="/static/js/quiz.js"></script>
+        <script src="/static/js/quiz-1.js"></script>
+        <script src="/static/js/jquery-3.5.1.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
@@ -148,7 +149,7 @@
     <body>
         <div class='left_bar'>
             <div class='left_top'>
-                <p>임진왜란 발발과 전개 양상 핵심 단어</p>
+                <p>르네상스와 종교개혁 핵심 단어</p>
                 <img src='/static/img/wordcloud.png' width=100%/>
             </div>
             <div class='left_middle'>
@@ -158,19 +159,19 @@
                     <p></p>
                 </div>
                 <div class='quiz1'>
-                    <p>강의 영상 00:03 으로부터 생성된 퀴즈입니다.</p>
+                    <p>강의 영상 17:56 으로부터 생성된 퀴즈입니다.</p>
                     <h2>헨리 8세의 이혼 문제 때문에 시작된 것은?</h2>
                     <p></p>
                     <a onclick="ans('quiz1');"><div id='ans1'>정답을 보려면 클릭하세요. Click!</div></a>
                 </div>
                 <div class='quiz2'>
-                    <p>강의 영상 00:13 으로부터 생성된 퀴즈입니다.</p>
+                    <p>강의 영상 04:32 으로부터 생성된 퀴즈입니다.</p>
                     <h2>오랜 세월동안 사람들을 지배한 것은?</h2>
                     <p></p>
                     <a onclick="ans('quiz2');"><div id='ans2'>정답을 보려면 클릭하세요. Click!</div></a>
                 </div>
                 <div class='quiz3'>
-                    <p>강의 영상 00:23 으로부터 생성된 퀴즈입니다.</p>
+                    <p>강의 영상 14:18 으로부터 생성된 퀴즈입니다.</p>
                     <h2>스위스에 종교 개혁을 한 사람은?</h2>
                     <p></p>
                     <a onclick="ans('quiz3');"><div id='ans3'>정답을 보려면 클릭하세요. Click!</div></a>
@@ -188,8 +189,8 @@
         <div class='right_bar'>
             <div class='right_top'>
                 <p> 이지은의 세계사 101가지 개념완성 - 16강 르네상스와 종교개혁</p>
-                <video id='myVideo' src='https://r2---sn-oguesnz6.c.drive.google.com/videoplayback?expire=1595240633&ei=eTgVX_6mG4meuwK0jYo4&ip=58.234.16.72&cp=QVNOV0NfT1ZRRFhOOlh3WkZWc2s1dXJYMFZlVzFsT2NZZEtMaDR0dmZPWktNU05FXzRob3lXQnc&id=f66fec621e3d4b97&itag=18&source=webdrive&requiressl=yes&mh=0F&mm=32&mn=sn-oguesnz6&ms=su&mv=m&mvi=2&pl=13&sc=yes&ttl=transient&susc=dr&driveid=1QtwChyhMnnD13rGXUC94r2cz5_uO5Aqn&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=1200.007&lmt=1595160691371498&mt=1595226145&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRAIgXqS2Kj6j5RV-n8A-3zGMNxxk4Qt0jbBo4r91PO3u5eYCICIfsxAM1JXBIuI6Ihz65SIslIvuNLRsJUEzHV2uu5p9&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRQIhAMk26u-XbEwSuenHXSDMX_khaFDCPU2W8LIDN_hTh7VXAiAES2Q5Vpk-ZVpNKC1EL1IqQ9HDcW8xWmCxv-fA1AfTUg==&cpn=yOdfMjDOQYPmYhXJ&c=WEB_EMBEDDED_PLAYER&cver=20200716' type='video/mp4' controls></video>
-                {% comment %} <video id='myVideo' src='/static/video/sample.mp4' type='video/mp4' controls></video> {% endcomment %}
+                {% comment %} <video id='myVideo' src='https://r2---sn-oguesnz6.c.drive.google.com/videoplayback?expire=1595240633&ei=eTgVX_6mG4meuwK0jYo4&ip=58.234.16.72&cp=QVNOV0NfT1ZRRFhOOlh3WkZWc2s1dXJYMFZlVzFsT2NZZEtMaDR0dmZPWktNU05FXzRob3lXQnc&id=f66fec621e3d4b97&itag=18&source=webdrive&requiressl=yes&mh=0F&mm=32&mn=sn-oguesnz6&ms=su&mv=m&mvi=2&pl=13&sc=yes&ttl=transient&susc=dr&driveid=1QtwChyhMnnD13rGXUC94r2cz5_uO5Aqn&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=1200.007&lmt=1595160691371498&mt=1595226145&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRAIgXqS2Kj6j5RV-n8A-3zGMNxxk4Qt0jbBo4r91PO3u5eYCICIfsxAM1JXBIuI6Ihz65SIslIvuNLRsJUEzHV2uu5p9&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRQIhAMk26u-XbEwSuenHXSDMX_khaFDCPU2W8LIDN_hTh7VXAiAES2Q5Vpk-ZVpNKC1EL1IqQ9HDcW8xWmCxv-fA1AfTUg==&cpn=yOdfMjDOQYPmYhXJ&c=WEB_EMBEDDED_PLAYER&cver=20200716' type='video/mp4' controls></video> {% endcomment %}
+                <video id='myVideo' src='https://r2---sn-oguesnz6.c.drive.google.com/videoplayback?expire=1595238545&ei=UTAVX--SOJCluAKF9Yb4BQ&ip=58.140.18.30&cp=QVNOV0NfV1VSRlhOOnVLV3BwZWRFeFoxSzFjNlE5cUREQjRVdGY5UU5sdUdrYnRhN0JGWnlFVHY&id=f66fec621e3d4b97&itag=18&source=webdrive&requiressl=yes&mh=0F&mm=32&mn=sn-oguesnz6&ms=su&mv=m&mvi=2&pl=20&sc=yes&ttl=transient&susc=dr&driveid=1QtwChyhMnnD13rGXUC94r2cz5_uO5Aqn&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=1200.007&lmt=1595160691371498&mt=1595224045&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRQIgS19MuL6kidaR-6iObNG_oCuDrwAGDx1whAhowNDGjFwCIQDH0n--I6BPjJKxYKA7t9z39bDtGagl3uM82mNTM1pz-g==&lsparams=mh,mm,mn,ms,mv,mvi,pl,sc&lsig=AG3C_xAwRAIgIswi7Tgw7XkTuVn9v5oQA7VWM2Uwo8GcvjF9FhnUUdMCIBXhqLcHoCB0-cnH3Z8LZTgrhOMnJKa93x4MUG6OmXHf&cpn=imM8iPWCXCJW-lE-&c=WEB_EMBEDDED_PLAYER&cver=20200716' type='video/mp4' controls></video>
             </div>
             <div>
                 <div class='right_middle_title'>
@@ -201,7 +202,7 @@
                 </div>
                 <div class='right_middle_option'>
                     <button type="button" onClick="location.href='cornell'" style="border: none; outline:none; background:none;">
-                        <img src='/static/svg/export.svg' title="코넬식 노트 수정하기" width="30px" height="30px" >
+                        <img src='/static/svg/edit.svg' title="코넬식 노트 수정하기" width="30px" height="30px" >
                     </button>
                     <button type="button" onClick="location.href='download'" style="border: none; outline:none; background:none;">
                         <img src='/static/svg/export.svg' title="코넬식 노트 다운받기" width="30px" height="30px" >
