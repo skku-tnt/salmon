@@ -10,7 +10,7 @@ function loadQuiz() {
     var origin = document.querySelector('.left_middle_content');
 
     // video pause
-    if (player.currentTime >= 3 && player.currentTime < 3.1) {
+    if (player.currentTime >= 1076 && player.currentTime < 1076.1) {
         player.pause();
 
         if (player.webkitDisplayingFullscreen) {
@@ -20,7 +20,7 @@ function loadQuiz() {
         var quizArea = document.querySelector('.quiz1');
         quizArea.style.display = 'block';
     }
-    if (player.currentTime >= 13 && player.currentTime < 13.1) {
+    if (player.currentTime >= 272 && player.currentTime < 272.1) {
         player.pause();
 
         if (player.webkitDisplayingFullscreen) {
@@ -30,7 +30,7 @@ function loadQuiz() {
         var quizArea = document.querySelector('.quiz2');
         quizArea.style.display = 'block';
     }
-    if (player.currentTime >= 23 && player.currentTime < 23.1) {
+    if (player.currentTime >= 858 && player.currentTime < 858.1) {
         player.pause();
 
         if (player.webkitDisplayingFullscreen) {
@@ -42,17 +42,17 @@ function loadQuiz() {
     }
 
     // delete quiz
-    if (player.currentTime >= 8 && player.currentTime < 8.1) {
+    if (player.currentTime >= 1086 && player.currentTime < 1086.1) {
         var quizArea = document.querySelector('.quiz1');
         quizArea.style.display = 'none';
         origin.style.display = 'block';
     }
-    if (player.currentTime >= 18 && player.currentTime < 18.1) {
+    if (player.currentTime >= 282 && player.currentTime < 282.1) {
         var quizArea = document.querySelector('.quiz2');
         quizArea.style.display = 'none';
         origin.style.display = 'block';
     }
-    if (player.currentTime >= 28 && player.currentTime < 28.1) {
+    if (player.currentTime >= 868 && player.currentTime < 868.1) {
         var quizArea = document.querySelector('.quiz3');
         quizArea.style.display = 'none';
         origin.style.display = 'block';
@@ -63,19 +63,19 @@ function stateQuiz() {
     var player1 = document.getElementById('myVideo');
     var origin = document.querySelector('.left_middle_content');
 
-    if (player1.currentTime >=3 && player1.currentTime <= 8) {
+    if (player1.currentTime >=1076 && player1.currentTime <= 1086) {
         var quizArea = document.querySelector('.quiz1');
         if (quizArea.style.display === 'none') {
             quizArea.style.display = 'block';
             origin.style.display = 'none';
         }
-    } else if (player1.currentTime >= 13 && player1.currentTime <= 18) {
+    } else if (player1.currentTime >= 272 && player1.currentTime <= 282) {
         var quizArea = document.querySelector('.quiz2');
         if (quizArea.style.display === 'none') {
             quizArea.style.display = 'block';
             origin.style.display = 'none';
         }
-    } else if (player1.currentTime >= 23 && player1.currentTime <= 28) {
+    } else if (player1.currentTime >= 858 && player1.currentTime <= 868) {
         var quizArea = document.querySelector('.quiz3');
         if (quizArea.style.display === 'none') {
             quizArea.style.display = 'block';
