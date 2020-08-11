@@ -14,4 +14,11 @@
 
 
 ## 🔔 프로토타입
-![image](https://user-images.githubusercontent.com/59307414/89878630-be598200-dbfc-11ea-8ee3-4657c299d599.png)
+- 플레이어
+![image](https://user-images.githubusercontent.com/59307414/89880075-c1ee0880-dbfe-11ea-9981-a97c316d7ce6.png)
+
+- 코넬식 노트 작성
+![image](https://user-images.githubusercontent.com/59307414/89880208-f366d400-dbfe-11ea-8f3b-3942705f4cc3.png)
+
+- PDF 파일 저장
+![image](https://user-images.githubusercontent.com/59307414/89880405-2a3cea00-dbff-11ea-94ca-885fef0c48f3.png)
